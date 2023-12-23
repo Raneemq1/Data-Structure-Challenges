@@ -84,6 +84,7 @@ void remove(dynamic x){
 
       // Move to the next node without updating prev
       current = current.next;
+      size--;
     } else {
       prev = current;
       current = current.next;
@@ -98,17 +99,18 @@ void main() {
   LinkedList myList = LinkedList();
 
   myList.insert(13);
-   myList.insert("hi");
+  myList.insert("hi");
   myList.insert(5);
+  myList.insert(1);
   myList.insert("bye");
-  myList.insert(5);
+  myList.insert(15);
 
   
 print('List Before');
 myList.display(); 
 
 
-  print('List After reverse');
+  print('List in a reverse mode');
   //Challenge3:Print in Reverse
 myList.displayReverse(myList.head);
 
@@ -126,5 +128,8 @@ myList.displayReverse(myList.head);
   myList.remove(5);
   myList.display();
 
+  print('List middle node');
+  //Challenge4: Find the middle node
+  myList.middle();
 }
 
